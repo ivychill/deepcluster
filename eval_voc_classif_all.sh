@@ -6,8 +6,11 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 
-VOC="/private/home/bojanowski/data/VOCdevkit/VOC2007"
-CAFFE="/private/home/bojanowski/code/unsup-eval-pascal/voc-classification/caffe"
+#VOC="/private/home/bojanowski/data/VOCdevkit/VOC2007"
+VOC="${HOME}/user/fengchen/ssl/datasets/VOCdevkit/VOC2007"
+#CAFFE="/private/home/bojanowski/code/unsup-eval-pascal/voc-classification/caffe"
+CAFFE="${HOME}/user/fengchen/ssl/caffe"
+
 
 # download code for pascal classification
 mkdir -p third-parties
@@ -30,10 +33,12 @@ sed -i -e "s/stepsize=10000/stepsize=20000/g" third-parties/voc-classification/s
 sed -i -e "s/stepsize=5000/stepsize=20000/g" third-parties/voc-classification/src/train_cls.py
 
 # run transfer
-MODELROOT="${HOME}/deepcluster_models"
+#MODELROOT="${HOME}/deepcluster_models"
+MODELROOT="deepcluster_models"
 PROTO="${MODELROOT}/alexnet/model.prototxt"
 MODEL="${MODELROOT}/alexnet/model.caffemodel"
-EXP="${HOME}/deepcluster_exp/pascal_all"
+#EXP="${HOME}/deepcluster_exp/pascal_all"
+EXP="exp/pascal_all"
 LR=0.001
 BSZ=16
 
