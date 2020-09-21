@@ -11,16 +11,7 @@ logs
 work_space
 
 # Don't track content of these folders
-out/
-outs/
-output/
-outputs/
-model/
-models/
-log/
-logs/
-result/
-results/
+exp/
 __pycache__/
 .idea/
 core
